@@ -1,28 +1,42 @@
 :root {
     --secondaryCol: white;
     --linearGradient: linear-gradient(0deg, rgba(210,82,186,1) 0%, rgba(57,0,57,1) 100%);
+    --backgroundColor: rgb(40, 40, 50);
+    --bright-turquoise: #2aefcb;
+    --textColor: rgb(210, 82, 246);
 }
 
 *{
-    color: rgb(210, 82, 246);
-    background-color: rgb(40, 40, 50); 
+    color: var(--textColor);
+    background-color: var(--backgroundColor); 
 }
 
-h1 {
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    margin: 8%;
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+
+header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+header h1 {
     text-align: center;
     font-size: 250%;
     margin-bottom: 2%;
-
 }
 
-h2 {
-    position: relative;
-    border: 10% solid var(--secondaryCol);
-    border-radius: 8px;
-    margin-top: -12px;
-}
-
-h1::after {
+header h1::after {
     display: inline-block;
     content: '\1F4DD';
 }
@@ -34,45 +48,64 @@ header p {
     margin-bottom: 2%;
 }
 
-body {
-    margin: 8%;
-}
-
-pre { 
-    color: var(--secondaryCol);
-    display: block;
-    border: 1px ;
-    border-radius: 10px;
-    margin: 3%; 
-    margin-top: 3%;
-    margin-bottom: 3%;
-    background: var(--linearGradient);
-    font-family: "Lucide Console", sans-serif;
-}
-
-.flexContainer {
+.container-row {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    /* display: flex;
     flex-wrap: wrap;
     flex: 3;
     margin: 5%;
     margin-bottom: 5%;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: center; */
 }
 
-.flexChild {
-    border: 3px dashed var(--secondaryCol);
-    margin-bottom: 10px;
+.justify-center{
+    justify-content: center;
 }
 
-.flexChild h2 {
-    text-align: center;
+.container-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    outline: 2px dashed var(--secondaryCol);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+    padding: 2rem;
+
+    /* border: 3px dashed var(--secondaryCol);
+    margin-bottom: 10px; */
+}
+
+.card-header {
+    position: relative;
+    border: 10% solid var(--secondaryCol);
+    border-radius: 8px;
+    margin-top: -12px;
+}
+
+.card .card-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondaryCol);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+
+    /* text-align: center;
     border: 3px solid var(--secondaryCol);
-    margin-bottom: 5px;
-}
-
-.flexChild p {
-    margin: 30px;
+    margin-bottom: 5px; */
 }
 
 h2:hover{
@@ -101,18 +134,60 @@ pre:hover{
     transition: all 0.7s ease-in-out;
 }
 
+.card .card-code{
+    flex-grow: 1;
+}
+
+.card-code {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--secondaryCol);
+    border-radius: 8px;
+    /* background-color doesn't function with linear-gradient */
+    background: var(--linearGradient);
+    display: flex;
+    align-items: center;
+
+    margin-top: 3%;
+    /* color: var(--secondaryCol);
+    display: block;
+    border: 1px ;
+    border-radius: 10px;
+    margin: 3%; 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background: var(--linearGradient);
+    font-family: "Lucide Console", sans-serif; */
+}
+
+code {
+    color: var(--secondaryCol);
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+        'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+        'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+        monospace;
+    background-color: transparent;
+}
+
 footer {
     text-align: center;
 }
-
-/* @media screen and (max-width: 992px)
-{
-    .flexContainer{
-        flex-direction: column;
-    }
-} */
 
 h3::after {
     display: inline-block;
     content: '\2764';
 }
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+    }
+
+    .container-column{
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+  

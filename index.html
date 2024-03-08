@@ -14,85 +14,98 @@
         <p>Ever have trouble recalling the exact syntax of your favourite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
     </header>
 
-    <section>
-        <div class="flexContainer">
-            <div class="flexChild">
-                <h2>Flexbox Row</h2>
-                <p>Use these three properties to create a flexbox.</p>
-                <pre>
+    <main>
+        <section class="container-row justify-center">
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">Flexbox Row</h2>
+                    <p>Use these three properties to create a flexbox.</p>
+                    <pre class="card-code">
 
-                    .row {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                    } 
-                </pre>
-            </div>
-            <div class="flexChild">
-                <h2>Flexbox Columm</h2>
-                <p>Use this to create a flexbox column layout.</p>
-                <pre>
-
-                    .column {
-                        display: flex;
-                        flex-direction: column;            
-                    } 
-                </pre>
-            </div>
-            <div class="flexChild">
-                <h2>CSS Grid Layout</h2>
-                <p>Build a 12-column layout using CSS Grid.</p>
-                <pre>
-
-                    .grid {
-                        display: grid;
-                        width: 100%;
-                        grid-template-columns; 
-                    repeat (12, 1fr);
-                    } 
-                </pre>
-            </div>
-            <div class="flexChild">
-                <h2>Linear Gradients</h2>
-                <p>This will create a background of a linear gradient from top to bottom.</p>
-                <pre>
-
-                    .linear-gradient-background {
-                        background-image: linear gradient(
-                            rgba(232, 102, 236, 0, 3) 0%,
-                            rgba(232, 102, 236, 0, 6) 
-                        100%);
-                    } 
-                </pre>
-            </div>
-            <div class="flexChild">
-                <h2>Box Transition Glow</h2>
-                <p>Use transitions and box shadows to glow on hover.</p>
-                <pre>
-
-                    .code-card .card-header {
-                        border-radius: 8px;
-                        transition: all 0.5s ease-in-out;
-                    } 
-                </pre>
-            </div>
-            <div class="flexChild">
-                <h2>Overlay Card with Title</h2>
-                <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
-                <pre>
-
-                    .card-header {
-                        position: relative;
-                        margin-top: -20px;
+                        <code>.row {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
                     }
-                </pre>
+                    </code>
+                    </pre>
+                </figure>
             </div>
-        </div>
-    </section>
-    
-    <footer>
-        <h3>Made by Zac.</h3>
-    </footer>
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">Flexbox Columm</h2>
+                    <p>Use this to create a flexbox column layout.</p>
+                    <pre class="card-code">
 
+                        <code>.column {
+                    display: flex;
+                    flex-direction: column;            
+                    }
+                    </code> 
+                    </pre>
+                </figure>
+            </div>
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">CSS Grid Layout</h2>
+                    <p>Build a 12-column layout using CSS Grid.</p>
+                    <pre class="card-code">
+
+                        <code>.grid {
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns; 
+                    repeat (12, 1fr);
+                    }
+                    </code> 
+                    </pre>
+                </figure>
+            </div>
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">Linear Gradients</h2>
+                    <p>This will create a background of a linear gradient from top to bottom.</p>
+                    <pre class="card-code">
+
+                        <code>.linear-gradient-background {
+                    background-image: linear gradient(
+                    rgba(232, 102, 236, 0, 3) 0%,
+                    rgba(232, 102, 236, 0, 6) 100%);
+                    }
+                    </code> 
+                    </pre>
+                </figure>
+            </div>
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">Box Transition Glow</h2>
+                    <p>Use transitions and box shadows to glow on hover.</p>
+                    <pre class="card-code">
+
+                        <code>.code-card .card-header {
+                    border-radius: 8px;
+                    transition: all 0.5s ease-in-out;
+                    }
+                    </code>
+                    </pre>
+                </figure>
+            </div>
+            <div class="container-column">
+                <figure class="card">
+                    <h2 class="card-header">Overlay Card with Title</h2>
+                    <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+                    <pre class="card-code">
+
+                        <code>.card-header {
+                    position: relative;
+                    margin-top: -20px;
+                    }
+                    </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+    </main>
+    
 </body>
 </html>
