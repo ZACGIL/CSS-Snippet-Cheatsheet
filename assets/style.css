@@ -53,14 +53,6 @@ header p {
     flex-wrap: wrap;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    flex: 3;
-    margin: 5%;
-    margin-bottom: 5%;
-    justify-content: center;
-    align-items: center; */
 }
 
 .justify-center{
@@ -68,7 +60,7 @@ header p {
 }
 
 .container-column {
-    flex: 1 0 100%;
+    flex: 0 0 100%;
     padding: 1.5rem;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
@@ -83,9 +75,6 @@ header p {
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
     padding: 2rem;
-
-    /* border: 3px dashed var(--secondaryCol);
-    margin-bottom: 10px; */
 }
 
 .card-header {
@@ -102,25 +91,9 @@ header p {
     border: 2px solid var(--secondaryCol);
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
-
-    /* text-align: center;
-    border: 3px solid var(--secondaryCol);
-    margin-bottom: 5px; */
 }
 
-h2:hover{
-    box-shadow:
-    inset 0 0 50px #fff,
-    inset 20px 0 80px #f0f,
-    inset -20px 0 80px #0ff,
-    inset 20px 0 300px #f0f,
-    inset -20px 0 300px #0ff,
-    0 0 50px #fff,
-    -10px 0 80px #f0f,
-    10px 0 80px #0ff;
-    transition: all 0.7s ease-in-out;
-}
-
+h2:hover,
 pre:hover{
     box-shadow:
     inset 0 0 50px #fff,
@@ -145,21 +118,11 @@ pre:hover{
     padding: 1.2rem 1rem;
     color: var(--secondaryCol);
     border-radius: 8px;
-    /* background-color doesn't function with linear-gradient */
     background: var(--linearGradient);
     display: flex;
     align-items: center;
 
     margin-top: 3%;
-    /* color: var(--secondaryCol);
-    display: block;
-    border: 1px ;
-    border-radius: 10px;
-    margin: 3%; 
-    margin-top: 3%;
-    margin-bottom: 3%;
-    background: var(--linearGradient);
-    font-family: "Lucide Console", sans-serif; */
 }
 
 code {
@@ -175,11 +138,16 @@ footer {
     text-align: center;
 }
 
-h3::after {
+footer h4 {
+    text-align: center;
+    font-size: 100%;
+    margin-top: 2%;
+}
+
+footer h4::after {
     display: inline-block;
     content: '\2764';
 }
-
 @media screen and (min-width: 992px) {
     header {
         width: 75%;
@@ -190,4 +158,3 @@ h3::after {
         max-width: 33.333%;
     }
 }
-  
